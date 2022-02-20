@@ -23,5 +23,13 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from 'vuex';
+
+export default {
+    computed: {
+        ...mapState('auth', {
+            firstname: (state) => state.name,
+        })
+    }
+};
 </script>
